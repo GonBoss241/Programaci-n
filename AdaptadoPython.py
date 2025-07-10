@@ -75,7 +75,7 @@ def estacionamiento():
         cambio_total, cambio_desglosado = calcular_cambio_optimo(
             pago_acumulado_centavos, COSTO_ESTACIONAMIENTO_CENTAVOS
         )
-        return render_template('index.html', 
+        return render_template('Index.html', 
                                pago_completado=True,
                                cambio_total=cambio_total,
                                cambio_desglosado=cambio_desglosado,
@@ -83,7 +83,7 @@ def estacionamiento():
                                costo_total=COSTO_ESTACIONAMIENTO_CENTAVOS / 100.0)
 
     # Si aún no se ha pagado, mostramos la interfaz de pago
-    return render_template('index.html', 
+    return render_template('Index.html', 
                            costo_total=COSTO_ESTACIONAMIENTO_CENTAVOS / 100.0,
                            pago_acumulado=pago_acumulado_centavos / 100.0,
                            restante=(COSTO_ESTACIONAMIENTO_CENTAVOS - pago_acumulado_centavos) / 100.0,
